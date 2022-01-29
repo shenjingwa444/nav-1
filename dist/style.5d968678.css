@@ -1,0 +1,147 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+ul,ol{list-style: none;}
+*:before,*:after{box-sizing: border-box;}
+a{color:inherient;text-decoration:none;}
+
+body{
+    background:#eee;
+}
+
+.globalHeader{
+    margin:20px;
+}
+@media(min-width:500px){
+    .globalHeader{
+        margin:60px 0 100px;
+    }
+}
+
+.searchForm{
+    display:flex;
+    justify-content:space-between;   
+}
+@media(min-width:500px){
+    .searchForm{
+        max-width:400px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+.searchForm > input{
+    margin-right:10px;
+    padding:0 10px;
+    width:100%;
+    height:40px;
+    border-radius:4px;
+    border:1px solid #ddd;
+}
+
+.searchForm > button{
+    white-space:nowrap;
+    padding:0 28px;
+    background-color: #1A89C8;
+    color:white;
+    border:none;
+    border-radius:4px;
+    font-size:16px;
+}
+
+.globalMain{
+    max-width: 900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.siteList{
+    margin:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+@media(min-width:500px){
+    .siteList{
+        margin-left:0;
+        margin-right:-20px;
+        justify-content: flex-start;
+    }
+}
+.siteList > li{
+    margin-bottom:20px;
+}
+
+@media(min-width:500px){
+    .siteList > li{
+        margin-right:20px;
+    }
+}
+
+.siteList .site{
+    width: 160px;
+    border: 1px solid #ddd;
+    border-radius:4px;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 0;
+    position:relative;
+    cursor:pointer;
+}
+
+.siteList .site  .logo{
+    height:64px;
+    width:64px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 64px;
+}
+
+.siteList .site  .link{
+    font-size: 14px;
+    margin-top: 4px;
+}
+.siteList .site .delIcon{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width: 25px;
+    height: 25px;
+    display:none;
+    cursor:default;
+}
+
+.siteList .site:hover .delIcon{
+    display:block;
+}
+
+.siteList .addButton{
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius:4px;
+    width: 160px;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    padding:16px 0;
+}
+
+.siteList .addButton .iconWrap{
+    width: 64px;
+    height: 64px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.siteList .addButton .icon{
+    width: 56px;
+    height: 56px;
+}
+
+.siteList .addButton .text{
+    font-size:14px;
+    margin-top:4px;
+}
