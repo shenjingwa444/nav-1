@@ -108,8 +108,7 @@ var $siteList = $(".siteList");
 var $lastLi = $(".lastLi");
 var x = localStorage.getItem("x");
 var xObject = JSON.parse(x);
-
-var hashMap = Object.keys(xObject).length !== 0 ? xObject : [{ logo: "D", url: "https://developer.mozilla.org/zh-CN/" }, { logo: "G", url: "https://github.com" }];
+var hashMap = xObject || [{ logo: "D", url: "https://developer.mozilla.org/zh-CN/" }, { logo: "G", url: "https://github.com" }];
 
 var simplifyUrl = function simplifyUrl(url) {
   return url.replace("https://", "").replace("http://", "").replace("www.", "").replace('//', '').replace(/\..*/, '');
@@ -158,4 +157,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.17a2e5fa.map
+//# sourceMappingURL=main.3996ef43.map

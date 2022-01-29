@@ -2,11 +2,10 @@ const $siteList = $(".siteList");
 const $lastLi = $(".lastLi");
 const x = localStorage.getItem("x");
 const xObject = JSON.parse(x);
-
-const hashMap = (Object.keys(xObject).length !==0 ? xObject : [
+const hashMap = xObject || [
   { logo: "D", url: "https://developer.mozilla.org/zh-CN/" },
   { logo: "G", url: "https://github.com" },
-]);
+];
 
 const simplifyUrl = (url) => {
   return url
